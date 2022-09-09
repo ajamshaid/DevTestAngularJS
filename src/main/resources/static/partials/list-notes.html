@@ -1,0 +1,53 @@
+<h4>Available notes</h4>
+
+
+<div>
+    <div ng-if="isNewList" >
+        <h2>New List from Backend</h2>
+        <ul class="notes-list"  >
+            <li  ng-repeat="note in notesList track by $index">
+                <p class="note-summary">{{note.name}}</p>
+                <p class="note-timedate"><i>{{note.text}}</i></p>
+            </li>
+        </ul>
+    </div>
+
+    <div ng-if="isNewList == false" >
+        <h4>This is default notes list</h4>
+        <ul class="notes-list"  >
+            <li>
+                <p class="note-summary">This is a note</p>
+                <p class="note-timedate"><i>12/11/39</i></p>
+            </li>
+            <li>
+                <p class="note-summary">This is a note</p>
+                <p class="note-timedate"><i>12/11/39</i></p>
+            </li>
+            <li>
+                <p class="note-summary">This is a note</p>
+                <p class="note-timedate"><i>12/11/39</i></p>
+            </li>
+            <li>
+                <p class="note-summary">This is a note</p>
+                <p class="note-timedate"><i>12/11/39</i></p>
+            </li>
+            <li>
+                <p class="note-summary">This is a note</p>
+                <p class="note-timedate"><i>12/11/39</i></p>
+            </li>
+            <li>
+                <p class="note-summary">This is a note</p>
+                <p class="note-timedate"><i>12/11/39</i></p>
+            </li>
+        </ul>
+    </div>
+
+    <md-button style="float:right" ng-click="getNotes()">
+        Re-Fresh List
+    </md-button>
+
+    <md-button style="float:right" ng-click="newNoteView()">
+        New Note
+    </md-button>
+</div>
+
